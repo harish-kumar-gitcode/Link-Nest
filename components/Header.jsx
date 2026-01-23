@@ -7,7 +7,7 @@ const Header = () => {
     <div className="flex items-center justify-between">
       <h1 className="text-[35px] font-medium mx-4 my-2">Link Nest</h1>
       <nav className="flex items-center gap-6 text-xl mr-4 font-normal">
-        <Link href="#" className={linkHover}>
+        <Link href="#how-it-works" className={linkHover}>
           How it works
         </Link>
         <Link href="#" className={linkHover}>

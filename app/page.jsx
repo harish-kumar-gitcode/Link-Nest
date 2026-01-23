@@ -1,6 +1,7 @@
 //All imports go here.
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import HowitWorks from "@/components/HowItWorks";
 
 //This is the metadata for homepage.
 export const metadata = {
@@ -13,7 +14,7 @@ const Homepage = () => {
     <div>
       <Header />
       {/* ------Hero Section------ */}
-      <div className="flex justify-between pl-4 bg-gray-100 items-center">
+      <div className="flex justify-between pl-4 bg-gray-100 items-center h-[80vh]">
         <div>
           <h1 className="text-7xl/20 font-bold">
             Share property links. Close faster.
@@ -36,47 +37,39 @@ const Homepage = () => {
         />
       </div>
       {/* ------How It Works------ */}
-      <div className="mt-10 pl-4">
-        <h1 className=" text-6xl font-semibold">How it works</h1>
-        {/* ------Step 1------ */}
-        <div className="flex justify-between items-center mx-20 ">
-          <div>
-            <h4 className="text-4xl font-medium text-blue-600 ">
-              Step 1: We create your property page
-            </h4>
-            <p className="w-[65%] pt-2">
-              You share the details. We build a clean, private page with photos
-              and a WhatsApp button. No setup, no dashboard needed.
-            </p>
-          </div>
-          <img src="/images/step-1.png" alt="" width="30%" />
-        </div>
-        {/* ------Step 2------ */}
-        <div className="flex justify-between items-center mx-30">
-          <img src="/images/step-2.png" alt="" width="30%" />
-          <div>
-            <h4 className="text-4xl font-medium text-teal-600">
-              Step 2: You share the link
-            </h4>
-            <p className="w-[65%] pt-2">
-              Send it on WhatsApp or follow-ups instead of typing long messages.
-              Works with WhatsApp, follow-ups, and QR codes.
-            </p>
-          </div>
-        </div>
-        {/* ------Step 3------ */}
-        <div className="flex justify-between items-center mx-20">
-          <div>
-            <h4 className="text-4xl font-medium text-green-600">
-              Step 3: Buyers message you directly
-            </h4>
-            <p className="w-[65%] pt-2">
-              Interested buyers tap once and start a WhatsApp conversation with
-              you. Buyers reach you directly — no middlemen.
-            </p>
-          </div>
-          <img src="/images/step-3.png" alt="" width="30%" />
-        </div>
+      <div className="mt-10 pl-4" id="how-it-works">
+        <h1 className="text-7xl font-semibold text-gray-900">How it works?</h1>
+
+        <HowitWorks
+          step={1}
+          color="text-blue-600"
+          title="We create your property page"
+          desc="You share the details. We build a clean, private page with photos and a WhatsApp button. No setup, no dashboard needed."
+          source="/images/step-1.png"
+          textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
+          imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
+        />
+
+        <HowitWorks
+          step={2}
+          color="text-teal-600"
+          title="You share the link"
+          desc="Send it on WhatsApp or follow-ups instead of typing long messages. Works with WhatsApp, follow-ups, and QR codes."
+          source="/images/step-2.png"
+          textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
+          imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
+          reverse
+        />
+
+        <HowitWorks
+          step={3}
+          color="text-green-600"
+          title="Buyers message you directly"
+          desc="Interested buyers tap once and start a WhatsApp conversation with you. Buyers reach you directly — no middlemen."
+          source="/images/step-3.png"
+          textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
+          imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
+        />
       </div>
       <Footer />
     </div>
