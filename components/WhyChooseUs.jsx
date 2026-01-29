@@ -63,8 +63,10 @@ const WhyChooseUs = () => {
 
         <div className=" h-[400px] relative w-[100%]">
           <Image
-            src="/images/why-choose-us-1.png"
+            src="/images/why-choose-us-1.webp"
             fill
+            priority
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain"
           ></Image>
         </div>
@@ -76,8 +78,9 @@ const WhyChooseUs = () => {
           >
             <div className="w-[180px] h-[180px] relative">
               <Image
-                src="/images/highlights/Professional.png"
+                src="/images/highlights/professional.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-contain"
               ></Image>
             </div>
@@ -97,8 +100,9 @@ const WhyChooseUs = () => {
           >
             <div className="w-[180px] h-[180px] relative">
               <Image
-                src="/images/highlights/saves-time.png"
+                src="/images/highlights/saves-time.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-contain"
               ></Image>
             </div>
@@ -118,8 +122,9 @@ const WhyChooseUs = () => {
           >
             <div className="w-[180px] h-[180px] relative">
               <Image
-                src="/images/highlights/no-distractions.png"
+                src="/images/highlights/no-distractions.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-contain"
               ></Image>
             </div>
@@ -139,8 +144,9 @@ const WhyChooseUs = () => {
           >
             <div className="w-[180px] h-[180px] relative">
               <Image
-                src="/images/highlights/fits-flow.png"
+                src="/images/highlights/fits-flow.webp"
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-contain"
               ></Image>
             </div>

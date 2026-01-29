@@ -32,7 +32,7 @@ const Homepage = () => {
           </button>
         </div>
         <img
-          src="/images/hero.png"
+          src="/images/hero.webp"
           alt="Hero image with sample page."
           width="52%"
         />
@@ -46,7 +46,7 @@ const Homepage = () => {
           color="text-blue-600"
           title="We create your property page"
           desc="You share the details. We build a clean, private page with photos and a WhatsApp button. No setup, no dashboard needed."
-          source="/images/step-1.png"
+          source="/images/step-1.webp"
           textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
           imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
         />
@@ -56,7 +56,7 @@ const Homepage = () => {
           color="text-teal-600"
           title="You share the link"
           desc="Send it on WhatsApp or follow-ups instead of typing long messages. Works with WhatsApp, follow-ups, and QR codes."
-          source="/images/step-2.png"
+          source="/images/step-2.webp"
           textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
           imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
           reverse
@@ -67,7 +67,7 @@ const Homepage = () => {
           color="text-green-600"
           title="Buyers message you directly"
           desc="Interested buyers tap once and start a WhatsApp conversation with you. Buyers reach you directly — no middlemen."
-          source="/images/step-3.png"
+          source="/images/step-3.webp"
           textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
           imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
         />
