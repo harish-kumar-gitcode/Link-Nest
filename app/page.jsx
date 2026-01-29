@@ -1,4 +1,5 @@
 //All imports go here.
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowitWorks from "@/components/HowItWorks";
@@ -31,11 +32,16 @@ const Homepage = () => {
             Get a Demo Page
           </button>
         </div>
-        <img
-          src="/images/hero.webp"
-          alt="Hero image with sample page."
-          width="52%"
-        />
+        <div className="relative w-[82%] h-[600px]">
+          <Image
+            src="/images/hero.webp"
+            alt="Hero image with sample page."
+            fill
+            priority
+            className="object-contain"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
       {/* ------How It Works------ */}
       <div className="mt-10 pl-4" id="how-it-works">

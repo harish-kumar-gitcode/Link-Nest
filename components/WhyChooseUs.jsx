@@ -65,8 +65,6 @@ const WhyChooseUs = () => {
           <Image
             src="/images/why-choose-us-1.webp"
             fill
-            priority
-            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-contain"
           ></Image>
         </div>
