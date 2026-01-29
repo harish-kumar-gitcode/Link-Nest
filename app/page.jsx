@@ -2,10 +2,11 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowitWorks from "@/components/HowItWorks";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 //This is the metadata for homepage.
 export const metadata = {
-  title: "Link Nest | Homepage",
+  title: "Link Nest - Homepage",
   description: "Get better quality leads without distractions.",
 };
 
@@ -39,7 +40,7 @@ const Homepage = () => {
       {/* ------How It Works------ */}
       <div className="mt-10 pl-4" id="how-it-works">
         <h1 className="text-7xl font-semibold text-gray-900">How it works?</h1>
-
+        {/* ------Step-1------ */}
         <HowitWorks
           step={1}
           color="text-blue-600"
@@ -49,7 +50,7 @@ const Homepage = () => {
           textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
           imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
         />
-
+        {/* ------Step-2------ */}
         <HowitWorks
           step={2}
           color="text-teal-600"
@@ -60,7 +61,7 @@ const Homepage = () => {
           imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
           reverse
         />
-
+        {/* ------Step-3------ */}
         <HowitWorks
           step={3}
           color="text-green-600"
@@ -71,6 +72,7 @@ const Homepage = () => {
           imganimate="animate-[fade-in-down_0.8s_ease-out_forwards]"
         />
       </div>
+      <WhyChooseUs animateimage="animate-[fade-in-left_0.7s_ease-out_forwards]"></WhyChooseUs>
       <Footer />
     </div>
   );
