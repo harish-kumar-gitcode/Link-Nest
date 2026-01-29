@@ -76,7 +76,7 @@ const WhyChooseUs = () => {
           >
             <div className="w-[180px] h-[180px] relative">
               <Image
-                src="/images/highlights/professional.png"
+                src="/images/highlights/Professional.png"
                 fill
                 className="object-contain"
               ></Image>
