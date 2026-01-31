@@ -4,6 +4,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HowitWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Pricing from "@/components/Pricing";
+import CTAsection from "@/components/CTA";
 
 //This is the metadata for homepage.
 export const metadata = {
@@ -79,6 +81,10 @@ const Homepage = () => {
         />
       </div>
       <WhyChooseUs animateimage="animate-[fade-in-left_0.7s_ease-out_forwards]"></WhyChooseUs>
+      {/* ----Pricing---- */}
+      <Pricing></Pricing>
+      {/* ----CTA section---- */}
+      <CTAsection />
       <Footer />
     </div>
   );
