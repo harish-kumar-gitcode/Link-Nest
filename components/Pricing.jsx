@@ -5,21 +5,30 @@ const plans = [
   {
     title: "Basic",
     price: "₹499",
-    features: ["1 Project", "Email Support"],
+    features: [
+      "1 clean property page",
+      "Share links easily on WhatsApp",
+      "Email support",
+    ],
     background:
       "text-gray-800 hover:scale-[1.05] transition-all transition-ease_out duration-300 [&>button]:hover:bg-gray-900",
   },
   {
     title: "Pro",
     price: "₹999",
-    features: ["5 Projects", "Priority Support"],
+    features: ["4 property pages", "Unlimited shares", "Priority support"],
     background:
       "[&>h3]:text-blue-700 [&>p]:text-blue-700 hover:scale-[1.05] transition-all transition-ease_out duration-300 [&>button]:bg-blue-600 [&>button]:hover:bg-blue-700",
   },
   {
     title: "Active Agent",
     price: "₹1999",
-    features: ["Unlimited Projects", "Dedicated Support"],
+    features: [
+      "9 property pages",
+      "Unlimited re-post",
+      "Dedicated Support",
+      "Verified badge",
+    ],
     background:
       "[&>h3]:text-teal-700 [&>p]:text-teal-700 hover:scale-[1.05] transition-all transition-ease_out duration-300 [&>button]:bg-teal-600 [&>button]:hover:bg-teal-700",
   },
