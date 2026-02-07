@@ -13,12 +13,16 @@ export default async function PropertyPage({ params }) {
 
   return (
     <>
-      <div className="ml-4">
-        <div>
-          <h1 className="text-4xl font-bold mt-2">Link Nest</h1>
+      <div>
+        <div className="ml-4">
+          <h1 className="text-4xl font-semibold mt-2 mb-4">Link Nest</h1>
         </div>
-        <div>
-          <Gallery images={listing.images} />
+        <div className="mx-20">
+          <Gallery
+            images={listing.images}
+            title={listing.title}
+            price={listing.price}
+          />
         </div>
       </div>
     </>
