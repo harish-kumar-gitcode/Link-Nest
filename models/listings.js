@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 //Listings Model
 const listingSchema = new mongoose.Schema(
   {
@@ -11,6 +10,26 @@ const listingSchema = new mongoose.Schema(
     breadth: "String",
     area: "String",
     facing: "String",
+    location: {
+      address: {
+        type: String,
+        required: true,
+      },
+      lat: {
+        type: Number,
+        required: true,
+      },
+      lng: {
+        type: Number,
+        required: true,
+      },
+    },
+    type: "String",
+    desc: "String",
+    agent: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Agent",
+    },
   },
   {
     timestamps: true,

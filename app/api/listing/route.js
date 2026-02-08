@@ -1,22 +1,39 @@
-//This route is only for POST
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/db";
-import Listings from "@/models/listings";
+import Listing from "@/models/listings";
+import Agent from "@/models/agent";
 import { generateSlug } from "@/lib/slug";
 
 export async function POST(req) {
   try {
     await connectDB();
 
-    //Collecting Data.
     const data = await req.json();
 
-    //Destructuring data.
-    const { title, images, price, length, breadth, area, facing } = data;
+    const {
+      title,
+      images,
+      price,
+      length,
+      breadth,
+      area,
+      facing,
+      type,
+      description,
+      location,
+      agentPhone,
+    } = data;
+
+    // ✅ Find agent by phone
+    const agent = await Agent.findOne({ phone: agentPhone });
+
+    if (!agent) {
+      return NextResponse.json({ message: "Agent not found" }, { status: 404 });
+    }
+
     const slug = generateSlug(title);
 
-    //Saving data.
-    const newListing = await Listings.create({
+    const newListing = await Listing.create({
       title,
       slug,
       images,
@@ -25,17 +42,22 @@ export async function POST(req) {
       breadth,
       area,
       facing,
+      type,
+      description,
+      location, // { address, lat, lng }
+      agent: agent._id,
     });
 
     return NextResponse.json(
-      { message: "Listing saved successfully.", newListing },
-      { status: "201" }
+      { message: "Listing saved successfully", newListing },
+      { status: 201 }
     );
   } catch (err) {
-    console.log("POST listing err:", err);
+    console.error("POST listing error:", err);
+
     return NextResponse.json(
-      { message: "A unexpected error occured", err },
-      { status: "500" }
+      { message: "Unexpected error occurred", error: err.message },
+      { status: 500 }
     );
   }
 }
