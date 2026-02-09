@@ -52,7 +52,7 @@ export default async function PropertyPage({ params }) {
         </div>
         {/* -----Map & Agent detail----- */}
         <div className="mt-5 flex mx-20 gap-6">
-          <div className="w-[65%] h-[350px] my-3 z-[-1]">
+          <div className="w-[65%] h-[350px] my-3 z-[1]">
             <PropertyMapClient
               lat={listing.location.lat}
               lng={listing.location.lng}
