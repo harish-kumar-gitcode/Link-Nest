@@ -12,6 +12,7 @@ import AgentCard from "@/components/AgentCard";
 import Footer from "@/components/Footer";
 import PropertyMapClient from "@/components/PropertyMapClient";
 import Link from "next/link";
+import PropertyDetails from "@/components/PropertyDetails";
 
 export default async function PropertyPage({ params }) {
   const { slug } = await params;
@@ -41,7 +42,7 @@ export default async function PropertyPage({ params }) {
         {/* -----Features----- */}
         <div className="flex justify-between mx-20 mt-5">
           <DescCard Icon={LandPlot} desc={listing.area} />
-          <DescCard Icon={MapPin} desc={listing.location.address} />
+          <DescCard Icon={MapPin} desc={listing.location.area} />
           <DescCard
             Icon={RulerDimensionLine}
             desc={`${listing.length} x ${listing.breadth}`}
@@ -49,25 +50,31 @@ export default async function PropertyPage({ params }) {
           <DescCard Icon={DoorOpen} desc={listing.facing} />
           <DescCard Icon={Building2} desc={listing.type} />
         </div>
-        {/* -----Description----- */}
-        <div className="mx-20 mt-5 flex justify-between">
-          <div className="border border-gray-200 w-[32%] rounded-lg h-[470px] px-4 py-3">
-            <h3 className="text-xl font-medium">Description</h3>
-            <p className="text-gray-800">{listing.desc}</p>
+        {/* -----Map & Agent detail----- */}
+        <div className="mt-5 flex mx-20 gap-6">
+          <div className="w-[65%] h-[350px] my-3 z-[-1]">
+            <PropertyMapClient
+              lat={listing.location.lat}
+              lng={listing.location.lng}
+            />
           </div>
-          <div className="w-[50%] h-[500px] mr-20">
+          <div className="w-[50%] h-auto mt-3">
             <AgentCard
               name={listing.agent.name}
               number={listing.agent.number}
               image={listing.agent.image}
             />
-            <div className="w-[85%] h-auto my-3">
-              <PropertyMapClient
-                lat={listing.location.lat}
-                lng={listing.location.lng}
-              />
+            <div className="flex h-[120px] mt-3 items-center gap-1">
+              <MapPin className="text-gray-500 h-[30px] w-[30px]" />
+              <p className="text-md text-gray-700">
+                {listing.location.address}
+              </p>
             </div>
           </div>
+        </div>
+        {/* -----Property Details----- */}
+        <div className="border border-gray-300 shadow-lg mx-20 rounded-lg">
+          <PropertyDetails desc={listing.desc} />
         </div>
 
         {/* -----Footer----- */}

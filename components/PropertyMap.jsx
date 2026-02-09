@@ -18,7 +18,7 @@ export default function PropertyMap({ lat, lng }) {
     <MapContainer
       center={[lat, lng]}
       zoom={16}
-      className="h-[300px] w-full rounded-lg"
+      className="h-full w-full rounded-lg"
     >
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 

@@ -8,7 +8,7 @@ export default function AgentCard({ name, image, number, whatsapp }) {
   const formattedNumber = number.startsWith("+91") ? number : `+91 ${number}`;
   return (
     <>
-      <div className="border border-gray-200 w-[76%] h-[38%] rounded-md px-3 py-2 flex flex-col justify-between">
+      <div className="border border-gray-200 w-full h-[54%] rounded-md px-3 py-2 flex flex-col justify-between">
         <div className="flex items-center gap-5">
           <div className="relative w-[60px] h-[60px]">
             <Image
