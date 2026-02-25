@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import PropertyMapClient from "@/components/PropertyMapClient";
 import Link from "next/link";
 import PropertyDetails from "@/components/PropertyDetails";
+import NotFoundProp from "@/components/NotFoundProperty";
 
 export default async function PropertyPage({ params }) {
   const { slug } = await params;
@@ -20,7 +21,7 @@ export default async function PropertyPage({ params }) {
   const listing = await getListingbySlug(slug);
 
   if (!listing) {
-    return <h1>Property not found</h1>;
+    return <NotFoundProp />;
   }
 
   return (
@@ -41,11 +42,11 @@ export default async function PropertyPage({ params }) {
         </div>
         {/* -----Features----- */}
         <div className="flex justify-between mx-20 mt-5">
-          <DescCard Icon={LandPlot} desc={listing.area} />
+          <DescCard Icon={LandPlot} desc={`${listing.area} sq.ft`} />
           <DescCard Icon={MapPin} desc={listing.location.area} />
           <DescCard
             Icon={RulerDimensionLine}
-            desc={`${listing.length} x ${listing.breadth}`}
+            desc={`${listing.length} x ${listing.breadth} ft`}
           />
           <DescCard Icon={DoorOpen} desc={listing.facing} />
           <DescCard Icon={Building2} desc={listing.type} />

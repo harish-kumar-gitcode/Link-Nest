@@ -39,3 +39,18 @@
     transform: translateY(0);
   }
 }
+
+/* Chrome, Safari */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Firefox */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+/* IE / Edge */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+}

@@ -12,10 +12,13 @@ const customMarker = new L.Icon({
 });
 
 export default function PropertyMap({ lat, lng }) {
+  if (!lat || !lng) return null;
+
   const googleMapsUrl = `https://www.google.com/maps?q=${lat},${lng}`;
 
   return (
     <MapContainer
+      key={`${lat}-${lng}`} // 🔥 prevents container reuse crash
       center={[lat, lng]}
       zoom={16}
       className="h-full w-full rounded-lg"

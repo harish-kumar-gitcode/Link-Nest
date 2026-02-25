@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/lib/db";
 import Listing from "@/models/listings";
-import Agent from "@/models/agent";
 import { generateSlug } from "@/lib/slug";
 
 export async function POST(req) {
@@ -10,42 +9,24 @@ export async function POST(req) {
 
     const data = await req.json();
 
-    const {
-      title,
-      images,
-      price,
-      length,
-      breadth,
-      area,
-      facing,
-      type,
-      description,
-      location,
-      agentPhone,
-    } = data;
-
-    // ✅ Find agent by phone
-    const agent = await Agent.findOne({ phone: agentPhone });
-
-    if (!agent) {
-      return NextResponse.json({ message: "Agent not found" }, { status: 404 });
-    }
-
-    const slug = generateSlug(title);
-
     const newListing = await Listing.create({
-      title,
-      slug,
-      images,
-      price,
-      length,
-      breadth,
-      area,
-      facing,
-      type,
-      description,
-      location, // { address, lat, lng }
-      agent: agent._id,
+      title: data.title,
+      slug: generateSlug(data.title),
+      images: data.images,
+      price: data.price,
+      length: data.length,
+      breadth: data.breadth,
+      area: data.area,
+      facing: data.facing,
+      type: data.type,
+      desc: data.description,
+      location: {
+        area: data.location.area,
+        address: data.location.address,
+        lat: data.location.lat,
+        lng: data.location.lng,
+      },
+      agent: data.agentId,
     });
 
     return NextResponse.json(

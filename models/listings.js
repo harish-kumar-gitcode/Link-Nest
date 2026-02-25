@@ -28,11 +28,14 @@ const listingSchema = new mongoose.Schema(
         required: true,
       },
     },
-    type: "String",
     desc: "String",
     agent: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Agent",
+    },
+    status: {
+      enum: ["active", "suspended", "deleted"],
+      type: "String",
     },
   },
   {
