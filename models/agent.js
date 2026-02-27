@@ -20,6 +20,11 @@ const AgentSchema = new mongoose.Schema(
     whatsApp: {
       type: String,
     },
+
+    status: {
+      type: String,
+      enum: ["active", "suspended", "deleted"],
+    },
   },
   { timestamps: true }
 );

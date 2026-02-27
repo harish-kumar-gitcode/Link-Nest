@@ -47,12 +47,37 @@ export default function UploadImages({ onUploadComplete }) {
     }
   };
 
-  const handleDelete = (index) => {
-    setImages((prev) => {
-      const updated = prev.filter((_, i) => i !== index);
-      onUploadComplete(updated); // update parent
-      return updated;
-    });
+  const handleDelete = async (index) => {
+    const imageToDelete = images[index]; // store BEFORE state update
+
+    try {
+      const res = await fetch("/api/upload/delete", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          image: imageToDelete,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        console.error(data);
+        return alert("Delete failed");
+      }
+
+      // Now update UI AFTER successful delete
+      setImages((prev) => {
+        const updated = prev.filter((_, i) => i !== index);
+        onUploadComplete(updated);
+        return updated;
+      });
+    } catch (err) {
+      console.log(err);
+      alert("An error occurred");
+    }
   };
 
   const openFilePicker = () => {
