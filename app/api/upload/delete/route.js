@@ -1,7 +1,13 @@
 import cloudinary from "@/lib/cloudinary";
 import { NextResponse } from "next/server";
+import { verifyAuth } from "@/lib/auth";
 
 export async function POST(req) {
+  const user = await verifyAuth(req);
+
+  if (!user) {
+    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+  }
   const { image } = await req.json();
 
   const publicId = image

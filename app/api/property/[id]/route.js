@@ -3,9 +3,15 @@ import listings from "@/models/listings";
 import { NextResponse } from "next/server";
 import agent from "@/models/agent";
 import mongoose from "mongoose";
+import { verifyAuth } from "@/lib/auth";
 
 //Fetching the property using ID.
 export async function GET(req, { params }) {
+  const user = await verifyAuth(req);
+
+  if (!user) {
+    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+  }
   await connectDB();
   const { id } = await params;
 

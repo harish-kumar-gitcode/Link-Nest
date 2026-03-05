@@ -1,8 +1,14 @@
 import connectDB from "@/lib/db";
 import { NextResponse } from "next/server";
 import agent from "@/models/agent";
+import { verifyAuth } from "@/lib/auth";
 
 export async function POST(req) {
+  const user = await verifyAuth(req);
+
+  if (!user) {
+    return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+  }
   try {
     await connectDB();
 
