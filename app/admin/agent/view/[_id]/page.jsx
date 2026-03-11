@@ -5,7 +5,6 @@ import ViewAgentListing from "@/components/adminComp/ViewAgentListing";
 
 export default async function HomePage({ params }) {
   const { _id } = await params;
-
   // DB LOgic and fetching data.
   await connectDB();
   const matchedAgent = await agent.findOne({ _id });

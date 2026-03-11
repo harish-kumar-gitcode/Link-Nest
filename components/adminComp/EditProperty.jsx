@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Trash2 } from "lucide-react";
 import UploadImages from "../UploadImage";
 import PropertyMapClient from "../PropertyMapClient";
+import Loading from "../Loading";
 
 const EditProperty = ({ id }) => {
   const router = useRouter();
@@ -92,7 +93,7 @@ const EditProperty = ({ id }) => {
     }
   };
 
-  if (loading) return <p className="p-4">Loading property...</p>;
+  if (loading) return <Loading>Laoding property...</Loading>;
   if (!formData) return <p className="p-4">Property not found</p>;
 
   return (

@@ -25,6 +25,10 @@ const AgentSchema = new mongoose.Schema(
       type: String,
       enum: ["active", "suspended", "deleted"],
     },
+    plan: {
+      type: String,
+      enum: ["Basic", "Standard", "Premium"],
+    },
   },
   { timestamps: true }
 );

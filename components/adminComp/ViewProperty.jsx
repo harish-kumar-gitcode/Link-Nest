@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { Pencil } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import Loading from "../Loading";
 
 export default function ViewProperty() {
-  const router = useRouter();
   const [query, setQuery] = useState("");
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -43,11 +43,6 @@ export default function ViewProperty() {
     }
   };
 
-  // Handling edits.
-  const handleEdit = (id) => {
-    router.push(`/admin/property/edit/${id}`);
-  };
-
   return (
     <div className="p-4">
       {/* 🔎 Search Field */}
@@ -74,7 +69,7 @@ export default function ViewProperty() {
       </form>
 
       {/* 🔄 Loading */}
-      {loading && <p className="mt-4">Loading...</p>}
+      {loading && <Loading>Loading properties...</Loading>}
 
       {/* ❌ No Results */}
       {!loading && properties.length === 0 && (
@@ -119,12 +114,13 @@ export default function ViewProperty() {
             {/* ✏ Edit Button */}
             <div className="relative flex items-center text-white mt-3">
               <Pencil className="absolute ml-3" size={15} />
-              <button
+              <Link
                 className="bg-orange-500 px-8 py-1 rounded-lg text-sm cursor-pointer hover:bg-orange-600 transition-all"
-                onClick={() => handleEdit(property._id)}
+                href={`/admin/property/edit/${property._id}`}
+                target="_blank"
               >
                 Edit
-              </button>
+              </Link>
             </div>
           </div>
         ))}

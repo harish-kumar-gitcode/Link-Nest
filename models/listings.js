@@ -29,12 +29,16 @@ const listingSchema = new mongoose.Schema(
       },
     },
     desc: "String",
+    type: {
+      type: "String",
+      enum: ["Apartment", "Villa", "Individual", "Plot", "Commercial"],
+    },
     agent: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Agent",
     },
     status: {
-      enum: ["active", "suspended", "deleted"],
+      enum: ["Active", "Suspended", "Deleted"],
       type: "String",
     },
   },

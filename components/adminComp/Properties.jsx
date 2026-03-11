@@ -1,4 +1,5 @@
 "use client";
+
 import AddProperty from "./AddProperty";
 import ViewProperty from "./ViewProperty";
 

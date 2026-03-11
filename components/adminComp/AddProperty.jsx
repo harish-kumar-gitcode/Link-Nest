@@ -516,6 +516,7 @@ const AddProperty = () => {
                       >
                         <option value="">Select Property Type</option>
                         <option value="Apartment">Apartment</option>
+                        <option value="Individual">Individual</option>
                         <option value="Villa">Villa</option>
                         <option value="Plot">Plot</option>
                         <option value="Commercial">Commercial</option>
