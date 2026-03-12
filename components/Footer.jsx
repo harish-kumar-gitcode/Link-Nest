@@ -143,7 +143,7 @@ export default function Footer() {
             {/* ---EMAIL--- */}
             <div className="flex gap-2 items-center">
               <Mail className="stroke-gray-400 bg-black h-7 w-7" />
-              <p className="text-lg text-gray-300">support@linknest.co.in</p>
+              <p className="text-lg text-gray-300">support@privypad.in</p>
             </div>
             {/* ---PHONE--- */}
             <div className="flex gap-2 items-center">
