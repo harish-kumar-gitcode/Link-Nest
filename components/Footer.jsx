@@ -16,8 +16,8 @@ export default function Footer() {
         <div className=" flex flex-col gap-3">
           {/* ---BRAND NAME & TAGLINE--- */}
           <div>
-            <h1 className="text-neutral-300 text-5xl font-medium ">
-              Link Nest
+            <h1 className="font-bold text-4xl text-blue-900">
+              Privy <span className="text-green-800">Pad</span>
             </h1>
             <p className=" text-sm text-gray-400">
               Share property links. Close faster.

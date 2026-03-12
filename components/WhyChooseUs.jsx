@@ -54,7 +54,7 @@ const WhyChooseUs = () => {
       <div>
         <div className="flex flex-col justify-center items-center" ref={secRef}>
           <h1 className="text-6xl/21 font-semibold mt-15">
-            Why real estate agents use LinkNest
+            Why real estate agents use Privy Pad
           </h1>
           <p className="text-lg text-gray-500">
             Because deals happen on WhatsApp - not portals.

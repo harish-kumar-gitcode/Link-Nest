@@ -6,6 +6,7 @@ import HowitWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import Pricing from "@/components/Pricing";
 import CTAsection from "@/components/CTA";
+import Link from "next/link";
 
 //This is the metadata for homepage.
 export const metadata = {
@@ -30,9 +31,14 @@ const Homepage = () => {
             Built for real estate agents. Not a{" "}
             <strike className="text-red-600"> listing portal.</strike>
           </p>
-          <button className="px-4 py-3 mt-10 text-white rounded-4xl bg-blue-700 text-lg transition cursor-pointer hover:bg-white hover:text-blue-700 border-1 border-transparent hover:border-blue-700">
-            Get a Demo Page
-          </button>
+          <div className="mt-8">
+            <Link
+              href="/request-demo"
+              className="px-4 py-3 text-white rounded-4xl bg-blue-700 text-lg transition cursor-pointer hover:bg-white hover:text-blue-700 border-1 border-transparent hover:border-blue-700"
+            >
+              Get a Demo Page
+            </Link>
+          </div>
         </div>
         <div className="relative w-[82%] h-[600px]">
           <Image
@@ -82,7 +88,9 @@ const Homepage = () => {
       </div>
       <WhyChooseUs animateimage="animate-[fade-in-left_0.7s_ease-out_forwards]"></WhyChooseUs>
       {/* ----Pricing---- */}
-      <Pricing></Pricing>
+      <div id="pricing">
+        <Pricing></Pricing>
+      </div>
       {/* ----CTA section---- */}
       <CTAsection />
       <Footer />

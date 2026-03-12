@@ -5,12 +5,14 @@ const linkHover = " hover:transition-all hover:duration-500 hover:scale-[1.2]";
 const Header = () => {
   return (
     <div className="flex items-center justify-between">
-      <h1 className="text-[35px] font-medium mx-4 my-2">Link Nest</h1>
+      <h1 className="font-bold text-4xl text-blue-950 mx-4 my-4">
+        Privy <span className="text-green-800">Pad</span>
+      </h1>
       <nav className="flex items-center gap-6 text-xl mr-4 font-normal">
         <Link href="#how-it-works" className={linkHover}>
           How it works
         </Link>
-        <Link href="#" className={linkHover}>
+        <Link href="#pricing" className={linkHover}>
           Pricing
         </Link>
         <Link
