@@ -47,6 +47,12 @@ export async function POST(req) {
         { status: 400 }
       );
 
+    if (data.image === "") {
+      return NextResponse.json(
+        { message: "Upload image before submitting." },
+        { status: 400 }
+      );
+    }
     // Checking if the agent already exists.
     const existingAgent = await agent.findOne({ number: data.number });
 
@@ -64,6 +70,7 @@ export async function POST(req) {
       image: data.image,
       whatsApp: data.whatsApp,
       status: data.status,
+      plan: data.plan,
     });
 
     return NextResponse.json(

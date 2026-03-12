@@ -3,6 +3,10 @@ import agent from "@/models/agent";
 import listings from "@/models/listings";
 import ViewAgentListing from "@/components/adminComp/ViewAgentListing";
 
+export const metadata = {
+  title: "Agent Listings | Privy Pad",
+};
+
 export default async function HomePage({ params }) {
   const { _id } = await params;
   // DB LOgic and fetching data.
