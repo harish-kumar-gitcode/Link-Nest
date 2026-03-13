@@ -12,7 +12,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <div className="bg-black md:h-[300px] grid md:grid-cols-5 grid-rows-4 grid-cols-1 md:gap-5 text-white pt-5 px-5">
+      <div className="bg-black md:h-[300px] grid md:grid-cols-5 grid-rows-2 grid-cols-1 md:gap-5 text-white pt-5 px-5">
         <div className="flex flex-col gap-3">
           {/* ---BRAND NAME & TAGLINE--- */}
           <div>
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
         {/* -----QUICK LINKS----- */}
-        <div className="md:justify-items-center row-start-2 md:row-auto">
+        <div className="md:justify-items-center row-start-2 md:row-auto h-40 mt-10 md:mt-0">
           <h1 className="text-2xl text-gray-300 font-medium">Quick Links</h1>
           <div className="text-base text-gray-300 flex flex-col ">
             {/* ---HOME--- */}
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
         </div>
         {/* -----POLICIES----- */}
-        <div className="md:justify-items-start row-start-3 md:row-auto">
+        <div className="md:justify-items-start row-start-3 md:row-auto h-40">
           <h1 className="text-2xl font-medium text-gray-300">Policies</h1>
           <div className="text-gray-300 text-base flex flex-col">
             {/* ---TERMS & CONDITIONS--- */}
@@ -137,7 +137,7 @@ export default function Footer() {
           </div>
         </div>
         {/* ---CONTACT INFORMATION--- */}
-        <div className="col-span-2 justify-items-center">
+        <div className="col-span-2 justify-items-start md:justify-items-center mb-8 md:mb-0">
           <h1 className="text-2xl font-medium text-gray-300">Contact</h1>
           <div className="flex flex-col gap-3 mt-3">
             {/* ---EMAIL--- */}
@@ -163,7 +163,7 @@ export default function Footer() {
             </h1>
           </div>
           {/* ---SUBSCRIBE--- */}
-          <div className="w-full flex justify-center mt-4">
+          <div className="w-full flex items-center mt-4">
             <div className="relative">
               <h1 className="ml-2 mb-1 text-gray-300">
                 Subscribe to our newsletters
@@ -171,7 +171,7 @@ export default function Footer() {
               <input
                 type="email"
                 autoComplete="new-email"
-                className="border border-white w-100 px-3 py-2 rounded-full"
+                className="border border-white w-80 md:w-100 px-3 py-2 rounded-full"
                 placeholder="Enter your email"
               />
               <button className="absolute top-7 right-0 border border-l-none right-0 rounded-full py-2 px-6 bg-blue-900 text-white text-base">
