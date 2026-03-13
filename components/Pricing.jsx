@@ -37,8 +37,10 @@ const plans = [
 const Pricing = () => {
   return (
     <div className="mb-3">
-      <h1 className="font-semibold text-6xl my-10 ml-20">Pricing</h1>
-      <div className="flex justify-evenly h-[400px] w-[100%]">
+      <h1 className="text-4xl text-center font-semibold md:text-6xl md:my-10">
+        Pricing
+      </h1>
+      <div className="flex overflow-x-auto md:overflow-x-none justify-center mt-5 gap-5 mx-4 md:mx-0 md:gap-0 md:justify-evenly md:h-[450px] md:w-[100%]">
         {plans.map((plan) => (
           <PricingCard
             key={plan.title}

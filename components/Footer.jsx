@@ -12,8 +12,8 @@ import { FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
   return (
     <>
-      <div className="bg-black h-[300px] grid grid-cols-5 gap-5 text-white pt-5 px-5">
-        <div className=" flex flex-col gap-3">
+      <div className="bg-black md:h-[300px] grid md:grid-cols-5 grid-rows-4 grid-cols-1 md:gap-5 text-white pt-5 px-5">
+        <div className="flex flex-col gap-3">
           {/* ---BRAND NAME & TAGLINE--- */}
           <div>
             <h1 className="font-bold text-4xl text-blue-900">
@@ -69,7 +69,7 @@ export default function Footer() {
           </div>
         </div>
         {/* -----QUICK LINKS----- */}
-        <div className="justify-items-center">
+        <div className="md:justify-items-center row-start-2 md:row-auto">
           <h1 className="text-2xl text-gray-300 font-medium">Quick Links</h1>
           <div className="text-base text-gray-300 flex flex-col ">
             {/* ---HOME--- */}
@@ -107,7 +107,7 @@ export default function Footer() {
           </div>
         </div>
         {/* -----POLICIES----- */}
-        <div className="justify-items-start">
+        <div className="md:justify-items-start row-start-3 md:row-auto">
           <h1 className="text-2xl font-medium text-gray-300">Policies</h1>
           <div className="text-gray-300 text-base flex flex-col">
             {/* ---TERMS & CONDITIONS--- */}

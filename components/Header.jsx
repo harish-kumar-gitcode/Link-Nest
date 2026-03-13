@@ -4,11 +4,11 @@ const linkHover = " hover:transition-all hover:duration-500 hover:scale-[1.2]";
 
 const Header = () => {
   return (
-    <div className="flex items-center justify-between">
-      <h1 className="font-bold text-4xl text-blue-950 mx-4 my-4">
+    <div className="flex items-center justify-between md:flex md:items-center md:justify-between">
+      <h1 className="font-bold text-3xl ml-4 mt-2 md:font-bold md:text-4xl text-blue-950 md:mx-4 md:my-4">
         Privy <span className="text-green-800">Pad</span>
       </h1>
-      <nav className="flex items-center gap-6 text-xl mr-4 font-normal">
+      <nav className="hidden md:flex md:items-center md:gap-6 md:text-xl md:mr-4 md:font-normal">
         <Link href="#how-it-works" className={linkHover}>
           How it works
         </Link>
@@ -17,7 +17,7 @@ const Header = () => {
         </Link>
         <Link
           href="#"
-          className="bg-blue-700 p-2 text-white rounded-3xl px-6 hover:bg-white hover:text-blue-700 border-1 border-transparent hover:border-blue-700 hover:transition-all hover:duration-300"
+          className="bg-blue-700 md:p-2 text-white rounded-3xl md:px-6 md:hover:bg-white md:hover:text-blue-700 md:border-1 md:border-transparent md:hover:border-blue-700 md:hover:transition-all md:hover:duration-300"
         >
           Contact Us
         </Link>

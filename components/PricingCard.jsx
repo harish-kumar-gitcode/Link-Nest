@@ -3,7 +3,7 @@ import { UserStar } from "lucide-react";
 export default function PricingCard({ title, price, features, background }) {
   return (
     <div
-      className={`rounded-xl border border-gray-200 p-6 shadow-xl shadow-black/40 w-[21%] flex flex-col h-auto ${background}`}
+      className={`rounded-xl border border-gray-200 p-6 shadow-xl shadow-black/40 md:min-w-[21%] min-w-[80%] h-100 flex flex-col md:h-100 mb-10 md:mb-0 ${background}`}
     >
       <h3 className="text-4xl font-semibold">{title}</h3>
 

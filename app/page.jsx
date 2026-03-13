@@ -14,33 +14,42 @@ export const metadata = {
   description: "Get better quality leads without distractions.",
 };
 
-const Homepage = () => {
+export default function HomePage() {
   return (
-    <div>
+    <div className="min-h-screen">
       <Header />
       {/* ------Hero Section------ */}
-      <div className="flex justify-between pl-4 bg-gray-100 items-center h-[80vh]">
-        <div>
-          <h1 className="text-7xl/20 font-bold">
-            Share property links. Close faster.
+      <div className="flex flex-col md:flex-row md:w-full items-center justify-between px-6 py-10 md:px-12 md:bg-gray-100 md:h-[80vh] gap-8">
+        {/* Text Content Area */}
+        <div className="mt-[54%] md:mt-0 relative w-full md:w-[60%]">
+          <h1 className="text-4xl md:text-7xl font-bold leading-tight md:leading-[1.1]">
+            Share property links. <br />
+            Close faster.
           </h1>
-          <p className="text-xl/6 mt-2 w-[75%] text-gray-800">
+
+          <p className="text-sm mt-2 text-gray-500 md:text-gray-800 text-lg md:text-xl md:max-w-[60%]">
             Share clean, private property pages instead of long{" "}
-            <span className="text-green-600">WhatsApp </span>
-            chats. <br />
+            <span className="text-green-600 font-medium">WhatsApp</span> chats.
+            <br className="md:block" />
             Built for real estate agents. Not a{" "}
-            <strike className="text-red-600"> listing portal.</strike>
+            <strike className="text-red-600 decoration-2">
+              listing portal.
+            </strike>
           </p>
-          <div className="mt-8">
+
+          <div className="mt-6">
             <Link
               href="/request-demo"
-              className="px-4 py-3 text-white rounded-4xl bg-blue-700 text-lg transition cursor-pointer hover:bg-white hover:text-blue-700 border-1 border-transparent hover:border-blue-700"
+              className="inline-block px-6 py-3 text-white rounded-full bg-blue-700 text-lg font-semibold transition-all hover:bg-white hover:text-blue-700 border border-transparent hover:border-blue-700 shadow-lg hover:shadow-none"
             >
               Get a Demo Page
             </Link>
           </div>
         </div>
-        <div className="relative w-[82%] h-[600px]">
+
+        {/* Image Container */}
+        {/* w-full on mobile, md:w-1/2 on desktop to prevent overlap */}
+        <div className="absolute top-5 md:relative w-full opacity-80 md:opacity-100 h-[300px] md:w-[40%] md:h-100">
           <Image
             src="/images/hero.webp"
             alt="Hero image with sample page."
@@ -52,8 +61,10 @@ const Homepage = () => {
         </div>
       </div>
       {/* ------How It Works------ */}
-      <div className="mt-10 pl-4" id="how-it-works">
-        <h1 className="text-7xl font-semibold text-gray-900">How it works?</h1>
+      <div className="ml-4 md:ml-0 md:mt-10 md:pl-4" id="how-it-works">
+        <h1 className="text-5xl md:text-7xl font-semibold text-gray-900">
+          How it works?
+        </h1>
         {/* ------Step-1------ */}
         <HowitWorks
           step={1}
@@ -96,6 +107,4 @@ const Homepage = () => {
       <Footer />
     </div>
   );
-};
-
-export default Homepage;
+}

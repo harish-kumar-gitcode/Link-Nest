@@ -53,17 +53,21 @@ const HowItWorks = ({
   return (
     <>
       <div
-        className={`flex justify-between items-center mx-20 ${
+        className={`flex md:justify-between items-center md:mx-20 ${
           reverse ? "flex-row-reverse" : ""
         }`}
       >
         <div ref={sectionRef} className="opacity-0">
-          <h4 className={`text-4xl -translate-y-10 font-medium ${color}`}>
+          <h4
+            className={`text-2xl md:text-4xl md:-translate-y-10 font-semibold ${color}`}
+          >
             Step {step}: {title}
           </h4>
-          <p className="w-[65%] pt-2 -translate-y-10">{desc}</p>
+          <p className="text-xs md:block md:text-base md:w-[65%] md:pt-2 md:-translate-y-10">
+            {desc}
+          </p>
         </div>
-        <div className="w-[40%] h-[300px] relative">
+        <div className="w-120 h-50 md:w-[40%] md:h-[300px] relative">
           <Image
             src={source}
             alt="Step images"

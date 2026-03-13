@@ -2,9 +2,11 @@ import Link from "next/link";
 
 const CTAsection = () => {
   return (
-    <div className="bg-slate-200 h-[300px] text-center flex flex-col justify-center">
+    <div className="bg-slate-200 md:h-[300px] h-55 text-center flex flex-col justify-center">
       <div>
-        <h3 className="text-7xl font-semibold mt-4">Still confused?</h3>
+        <h3 className="text-5xl md:text-7xl font-semibold mt-4">
+          Still confused?
+        </h3>
         <p className="text-gray-700">Book a free demo with us.</p>
       </div>
       <div className="mt-5">
