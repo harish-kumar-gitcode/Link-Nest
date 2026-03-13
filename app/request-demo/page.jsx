@@ -79,8 +79,8 @@ export default function HomePage() {
       ) : (
         <>
           {/* REQUEST FORM */}
-          <div className="grid grid-cols-3 mt-3">
-            <div className="flex flex-col justify-center rounded-md border-gray-200 shadow-lg items-center col-start-2 mx-12 h-130 justify-items-center border">
+          <div className="grid md:grid-cols-3 mt-3">
+            <div className="flex flex-col justify-center rounded-md border-gray-200 shadow-lg items-center col-start-2 mx-12 h-130 justify-items-center border px-6">
               <h1 className="text-4xl font-medium text-center">
                 Request a Demo
               </h1>
