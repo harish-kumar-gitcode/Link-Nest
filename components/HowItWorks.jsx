@@ -57,7 +57,7 @@ const HowItWorks = ({
           reverse ? "flex-row-reverse" : ""
         }`}
       >
-        <div ref={sectionRef} className="opacity-0">
+        <div ref={sectionRef} className="opacity-0 text-gray-600">
           <h4
             className={`text-2xl md:text-4xl md:-translate-y-10 font-semibold ${color}`}
           >
