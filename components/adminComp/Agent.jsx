@@ -328,11 +328,11 @@ export default function Agent() {
           </div>
         </div>
       ) : (
-        <div className="flex gap-4 mt-6">
+        <div className="flex gap-1 mt-4 flex-wrap">
           {agents.map((agent) => (
             <div
               key={agent._id}
-              className="hover:-translate-y-1 transition-all duration-200"
+              className="hover:-translate-y-1 transition-all duration-200 mt-3"
             >
               <AgentProp
                 name={agent.name}

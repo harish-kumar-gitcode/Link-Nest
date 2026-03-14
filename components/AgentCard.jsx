@@ -33,9 +33,9 @@ export default function AgentCard({ name, image, number, whatsapp }) {
           </div>
         </div>
 
-        <div className="flex items-start mb-3 justify-center">
-          <button className="flex items-center h-[100%] bg-green-600 rounded-lg w-65 pl-5 gap-2 text-white text-xl py-2 cursor-pointer hover:shadow-lg hover:bg-green-700 hover:scale-[0.95] transition-all duration-300">
-            <Image src="/images/whatsapp.webp" height={40} width={40} />
+        <div className="flex items-start my-3 md:mb-3 justify-center">
+          <button className="flex items-center px-3 text-sm h-[100%] bg-green-600 rounded-lg md:w-65 md:pl-5 gap-2 text-white md:text-xl py-2 cursor-pointer hover:shadow-lg hover:bg-green-700 hover:scale-[0.95] transition-all duration-300">
+            <Image src="/images/whatsapp.webp" height={30} width={30} />
             Chat on WhatsApp
           </button>
         </div>
