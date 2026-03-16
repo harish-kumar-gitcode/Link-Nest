@@ -12,7 +12,6 @@ import Link from "next/link";
 export const metadata = {
   title: "Privy Pad | Homepage",
   description: "Get better quality leads without distractions.",
-  metadataBase: new URL("https://link-nest-mu.vercel.app"),
   openGraph: {
     title: "Privy Pad | HomePage",
     description: "Get better quality leads without distractions.",
