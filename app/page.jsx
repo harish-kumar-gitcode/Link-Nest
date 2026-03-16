@@ -10,8 +10,13 @@ import Link from "next/link";
 
 //This is the metadata for homepage.
 export const metadata = {
-  title: "Link Nest - Homepage",
+  title: "Privy Pad | Homepage",
   description: "Get better quality leads without distractions.",
+  openGraph: {
+    title: "Privy Pad | HomePage",
+    description: "Get better quality leads without distractions.",
+    image: "/images/hero.webp",
+  },
 };
 
 export default function HomePage() {
