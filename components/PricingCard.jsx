@@ -1,37 +1,52 @@
-import { UserStar } from "lucide-react";
+import { Check, Star } from "lucide-react";
 
-export default function PricingCard({ title, price, features, background }) {
+export default function PricingCard({
+  title,
+  price,
+  desc,
+  features,
+  background,
+  buttonClass,
+  isPopular,
+}) {
   return (
     <div
-      className={`rounded-xl border border-gray-200 p-6 shadow-xl shadow-black/40 md:min-w-[21%] min-w-[80%] h-100 flex flex-col md:h-100 mb-10 md:mb-0 ${background}`}
+      className={`relative rounded-[32px] border p-8 flex flex-col transition-all duration-300 hover:translate-y-[-8px] 
+      w-full md:w-[350px] shadow-sm hover:shadow-2xl ${background} bg-white`}
     >
-      <h3 className="text-4xl font-semibold">{title}</h3>
+      {isPopular && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+          Most Popular
+        </div>
+      )}
 
-      <p className="mt-2 text-3xl font-bold">{price}</p>
+      <h3 className="text-2xl font-serif text-slate-900">{title}</h3>
+      <p className="text-sm text-slate-500 mt-2 mb-6 font-sans">{desc}</p>
 
-      <ul className="mt-4 space-y-2">
+      <div className="flex items-baseline gap-1 mb-8">
+        <span className="text-4xl font-bold text-slate-900">{price}</span>
+      </div>
+
+      <ul className="space-y-4 mb-10 flex-grow">
         {features.map((feature, index) => (
-          <li key={index} className="text-gray-600">
-            <span className="flex items-center gap-2">
-              {/* dot */}
-              <span className="inline-block h-[6px] w-[6px] bg-gray-400 rounded-full" />
-
-              {/* feature text */}
-              <span className="flex items-center gap-1">
-                {feature}
-
-                {title === "Active Agent" &&
-                  feature.toLowerCase().includes("verified") && (
-                    <UserStar className="w-4 h-4 text-teal-600" />
-                  )}
-              </span>
+          <li key={index} className="flex items-start gap-3">
+            <div className="mt-1 bg-emerald-100 rounded-full p-0.5">
+              <Check className="w-3 h-3 text-emerald-600" strokeWidth={3} />
+            </div>
+            <span className="text-sm text-slate-600 font-sans flex items-center gap-1">
+              {feature}
+              {feature.toLowerCase().includes("verified") && (
+                <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
+              )}
             </span>
           </li>
         ))}
       </ul>
 
-      <button className="mt-auto mb-5 w-full rounded-lg bg-black py-3 text-white cursor-pointer">
-        Let's Begin
+      <button
+        className={`w-full py-4 rounded-2xl text-white font-sans font-semibold tracking-wide transition-colors cursor-pointer ${buttonClass}`}
+      >
+        Select {title}
       </button>
     </div>
   );
