@@ -61,6 +61,12 @@ export default async function PropertyPage({ params }) {
     return <NotFoundProp />;
   }
 
+  const propertyUrl = `https://link-nest-mu.vercel.app/property/${slug}`;
+
+  const whatsappMessage = encodeURIComponent(
+    `Hi, I'm interested in viewing this property: ${propertyUrl}. Please let me know when we can schedule a private visit.`
+  );
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* -----Header/Hero----- */}
@@ -130,6 +136,14 @@ export default async function PropertyPage({ params }) {
         </div>
       </main>
 
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-white/80 backdrop-blur-lg border-t border-slate-100 md:hidden z-50">
+        <a
+          href={`https://wa.me/${listing.agent.number}?text=${whatsappMessage}`}
+          className="flex items-center justify-center w-full py-4 bg-slate-900 text-white rounded-2xl font-sans font-medium tracking-widest text-xs uppercase shadow-lg active:scale-95 transition-transform"
+        >
+          Request Private Viewing
+        </a>
+      </div>
       {/* -----Footer----- */}
       <Footer />
     </div>

@@ -11,10 +11,10 @@ import Link from "next/link";
 //This is the metadata for homepage.
 export const metadata = {
   title: "Privy Pad | Homepage",
-  description: "Get better quality leads without distractions.",
+  description: "Get luxury landing pages in 24 hours.",
   openGraph: {
     title: "Privy Pad | HomePage",
-    description: "Get better quality leads without distractions.",
+    description: "Get luxury landing pages in 24 hours.",
     images: [
       {
         url: "/images/hero.webp",
@@ -76,11 +76,16 @@ export default function HomePage() {
         <h1 className="text-5xl md:text-7xl font-semibold text-gray-900">
           How it works?
         </h1>
+        <p className="text-sm md:text-lg text-gray-600 mt-2">
+          WhatsApp is for chatting, not a 5Cr listings. <br />
+          Don't let your portfolio get lost in a sea of 'Price please?'
+          messages.
+        </p>
         {/* ------Step-1------ */}
         <HowitWorks
           step={1}
           color="text-blue-600"
-          title="We create your property page"
+          title="Send us your photos/info via whatsApp"
           desc="You share the details. We build a clean, private page with photos and a WhatsApp button. No setup, no dashboard needed."
           source="/images/step-1.webp"
           textanimate="animate-[fade-in-left_0.5s_ease-out_forwards]"
