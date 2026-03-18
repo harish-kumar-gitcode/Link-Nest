@@ -47,29 +47,29 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <div className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-4">
-            Simple, Transparent Pricing
-          </h2>
-          <p className="text-slate-500 font-sans max-w-lg mx-auto">
-            Elevate your listings today. No hidden commissions, just pure
-            professionalism.
-          </p>
-        </div>
+    <div className="py-16 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-serif text-slate-900 mb-4 tracking-tight">
+          Simple, Transparent Pricing
+        </h2>
+        <p className="text-slate-500 font-sans max-w-lg mx-auto">
+          Elevate your listings today. Join Bengaluru's elite consultants.
+        </p>
+      </div>
 
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8">
-          {plans.map((plan) => (
-            <PricingCard key={plan.title} {...plan} />
-          ))}
-        </div>
+      {/* MOBILE SWIPEABLE CARDS + DESKTOP GRID */}
+      <div
+        className="flex md:grid md:grid-cols-3 gap-8 px-6 pb-10 
+                   overflow-x-auto snap-x snap-mandatory scrollbar-hide 
+                   md:overflow-visible md:snap-none md:justify-center md:mx-60"
+      >
+        {plans.map((plan) => (
+          <PricingCard key={plan.title} {...plan} />
+        ))}
+      </div>
 
-        <div className="flex justify-center mt-12 text-slate-400 text-sm font-sans italic">
-          <p>
-            No lock-in periods. 100% ownership of your links. Cancel anytime.
-          </p>
-        </div>
+      <div className="flex justify-center mt-4 text-slate-400 text-xs font-sans italic">
+        <p>No lock-in periods. 100% ownership of your links. Cancel anytime.</p>
       </div>
     </div>
   );

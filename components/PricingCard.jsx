@@ -11,26 +11,34 @@ export default function PricingCard({
 }) {
   return (
     <div
-      className={`relative rounded-[32px] border p-8 flex flex-col transition-all duration-300 hover:translate-y-[-8px] 
-      w-full md:w-[350px] shadow-sm hover:shadow-2xl ${background} bg-white`}
+      className={`relative rounded-[32px] border p-8 flex flex-col shrink-0 
+      w-[85%] md:w-full snap-center transition-all duration-300 
+      md:hover:translate-y-[-8px] shadow-sm hover:shadow-2xl ${background} bg-white`}
     >
       {isPopular && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-emerald-600 text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest z-10">
           Most Popular
         </div>
       )}
 
-      <h3 className="text-2xl font-serif text-slate-900">{title}</h3>
-      <p className="text-sm text-slate-500 mt-2 mb-6 font-sans">{desc}</p>
+      <div className="mb-6">
+        <h3 className="text-2xl font-serif text-slate-900">{title}</h3>
+        <p className="text-xs text-slate-500 mt-1 font-sans line-clamp-2">
+          {desc}
+        </p>
+      </div>
 
-      <div className="flex items-baseline gap-1 mb-8">
+      <div className="mb-8">
         <span className="text-4xl font-bold text-slate-900">{price}</span>
+        {title === "Unlimited" && (
+          <span className="text-slate-400 text-sm ml-1">/mo</span>
+        )}
       </div>
 
       <ul className="space-y-4 mb-10 flex-grow">
         {features.map((feature, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <div className="mt-1 bg-emerald-100 rounded-full p-0.5">
+          <li key={index} className="flex items-start gap-3 text-left">
+            <div className="mt-1 bg-emerald-100 rounded-full p-0.5 shrink-0">
               <Check className="w-3 h-3 text-emerald-600" strokeWidth={3} />
             </div>
             <span className="text-sm text-slate-600 font-sans flex items-center gap-1">
