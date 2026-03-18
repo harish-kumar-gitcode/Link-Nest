@@ -311,9 +311,9 @@ export default function Agent() {
                   value={agentForm.plan}
                 >
                   <option value="">Select Plan</option>
-                  <option value="Basic">Basic</option>
-                  <option value="Standard">Standard</option>
-                  <option value="Premium">Premium</option>
+                  <option value="Starter">Starter</option>
+                  <option value="Professional">Professional</option>
+                  <option value="Unlimited">Unlimited</option>
                 </select>
               </div>
               <div className="flex justify-center mt-3">

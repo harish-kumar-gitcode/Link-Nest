@@ -27,7 +27,7 @@ const AgentSchema = new mongoose.Schema(
     },
     plan: {
       type: String,
-      enum: ["Basic", "Standard", "Premium"],
+      enum: ["Starter", "Professional", "Unlimited"],
     },
   },
   { timestamps: true }

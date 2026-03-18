@@ -3,30 +3,30 @@ import PricingCard from "./PricingCard";
 //Passing the props here.
 const plans = [
   {
-    title: "Basic",
-    price: "₹499",
-    features: [
-      "1 clean property page",
-      "Share links easily on WhatsApp",
-      "Email support",
-    ],
+    title: "Starter",
+    price: "₹799",
+    features: ["1 Premium Landing page", "WhatsApp Smart-Link", "24h Delivery"],
     background:
       "text-gray-800 hover:scale-[1.05] transition-all transition-ease_out duration-300 [&>button]:hover:bg-gray-900",
   },
   {
-    title: "Pro",
-    price: "₹999",
-    features: ["4 property pages", "Unlimited shares", "Priority support"],
+    title: "Professional",
+    price: "₹1999",
+    features: [
+      "3 Landing pages (~₹666 each)",
+      "Custom QR codes",
+      "2 story template",
+    ],
     background:
       "[&>h3]:text-blue-700 [&>p]:text-blue-700 hover:scale-[1.05] transition-all transition-ease_out duration-300 [&>button]:bg-blue-600 [&>button]:hover:bg-blue-700",
   },
   {
-    title: "Active Agent",
-    price: "₹1999",
+    title: "Unlimited",
+    price: "₹5999/mo",
     features: [
-      "9 property pages",
-      "Unlimited re-post",
-      "Dedicated Support",
+      "Unlimited listings",
+      "Monthly traffic reports",
+      "Priority Support",
       "Verified badge",
     ],
     background:
